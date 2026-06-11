@@ -1,0 +1,16 @@
+/include/ "system-conf.dtsi"
+#include "zcu102-rev1.0.dtsi"
+
+/ {
+    chosen {
+        myname = "Ali Mehrpooya";
+    };
+};
+
+&gem3 {
+    local-mac-address = [02 00 00 00 00 01];
+};
+
+&dwc3_0 {
+    dr_mode = "peripheral";
+};

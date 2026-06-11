@@ -1,0 +1,13 @@
+#Note: Mention Each package in individual line
+#These packages will get added into rootfs menu entry
+
+CONFIG_gpio-demo
+CONFIG_peekpoke
+
+CONFIG_samba
+CONFIG_samba-base
+CONFIG_linux-hello-world
+CONFIG_zcu102-usb-gadgets
+CONFIG_zcu102-webserver
+CONFIG_x11vnc
+CONFIG_tigervnc

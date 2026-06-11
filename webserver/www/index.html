@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ZCU102 — Xilinx Zynq UltraScale+ MPSoC</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Animated background grid -->
+<div class="bg-grid"></div>
+<div class="bg-glow"></div>
+
+<!-- Navigation -->
+<nav class="nav">
+  <div class="nav-logo">
+    <span class="nav-logo-icon">◈</span>
+    <span>ZCU102</span>
+  </div>
+  <div class="nav-links">
+    <a href="#overview">Overview</a>
+    <a href="#specs">Specs</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#connectivity">Connectivity</a>
+    <a href="#demo">Live Demo</a>
+  </div>
+  <div class="nav-status">
+    <span class="status-dot"></span>
+    <span id="board-status">Board Online</span>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero" id="overview">
+  <div class="hero-content">
+    <div class="hero-badge">SERVED FROM ZCU102</div>
+    <h1 class="hero-title">
+      Xilinx<br>
+      <span class="hero-title-accent">ZCU102</span><br>
+      Evaluation Board
+    </h1>
+    <p class="hero-subtitle">
+      Zynq UltraScale+ MPSoC — Quad-core ARM Cortex-A53 · Dual-core Cortex-R5 ·
+      Mali-400MP2 GPU · Programmable Logic · You are accessing this page served
+      directly from the board over USB Ethernet.
+    </p>
+    <div class="hero-cta">
+      <a href="#specs" class="btn-primary">Explore Specs</a>
+      <a href="#demo" class="btn-secondary">Live Demo</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat">
+        <div class="stat-value" id="uptime-val">--</div>
+        <div class="stat-label">Uptime (s)</div>
+      </div>
+      <div class="stat">
+        <div class="stat-value">600<span class="stat-unit">MHz</span></div>
+        <div class="stat-label">Max CPU Freq</div>
+      </div>
+      <div class="stat">
+        <div class="stat-value">4<span class="stat-unit">GB</span></div>
+        <div class="stat-label">DDR4 RAM</div>
+      </div>
+      <div class="stat">
+        <div class="stat-value">931<span class="stat-unit">GB</span></div>
+        <div class="stat-label">NVMe Storage</div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <div class="board-frame">
+      <img src="board.jpg" alt="ZCU102 Evaluation Board" class="board-img" id="hero-board-img">
+      <div class="board-frame-corner tl"></div>
+      <div class="board-frame-corner tr"></div>
+      <div class="board-frame-corner bl"></div>
+      <div class="board-frame-corner br"></div>
+    </div>
+    <div class="board-pulse"></div>
+  </div>
+</section>
+
+<!-- Specs Section -->
+<section class="specs-section" id="specs">
+  <div class="section-header">
+    <div class="section-tag">HARDWARE</div>
+    <h2>Technical Specifications</h2>
+    <p>The ZCU102 is AMD-Xilinx's flagship evaluation platform for the Zynq UltraScale+ MPSoC family.</p>
+  </div>
+
+  <div class="specs-grid">
+
+    <div class="spec-card" data-delay="0">
+      <div class="spec-card-icon">⬡</div>
+      <div class="spec-card-title">Processing System (PS)</div>
+      <ul class="spec-list">
+        <li><span>CPU</span><strong>Quad-core ARM Cortex-A53</strong></li>
+        <li><span>Real-time</span><strong>Dual Cortex-R5F @ 500MHz</strong></li>
+        <li><span>GPU</span><strong>Mali-400MP2</strong></li>
+        <li><span>Memory</span><strong>4GB 64-bit DDR4</strong></li>
+        <li><span>Cache L2</span><strong>1MB</strong></li>
+      </ul>
+    </div>
+
+    <div class="spec-card" data-delay="100">
+      <div class="spec-card-icon">◈</div>
+      <div class="spec-card-title">Programmable Logic (PL)</div>
+      <ul class="spec-list">
+        <li><span>Device</span><strong>XCZU9EG-2FFVB1156E</strong></li>
+        <li><span>LUTs</span><strong>274,080</strong></li>
+        <li><span>DSP Slices</span><strong>2,520</strong></li>
+        <li><span>Block RAM</span><strong>32.1 Mb</strong></li>
+        <li><span>UltraRAM</span><strong>27 Mb</strong></li>
+      </ul>
+    </div>
+
+    <div class="spec-card" data-delay="200">
+      <div class="spec-card-icon">⬢</div>
+      <div class="spec-card-title">High Speed Interfaces</div>
+      <ul class="spec-list">
+        <li><span>PCIe</span><strong>Gen2 × 4 (all GTR lanes)</strong></li>
+        <li><span>USB 3.0</span><strong>USB 2.0 via ULPI (active)</strong></li>
+        <li><span>SATA</span><strong>6 Gb/s</strong></li>
+        <li><span>DisplayPort</span><strong>2-lane DP 1.2a</strong></li>
+        <li><span>GTR Lanes</span><strong>4 × PS-GTR SerDes</strong></li>
+      </ul>
+    </div>
+
+    <div class="spec-card" data-delay="300">
+      <div class="spec-card-icon">⬟</div>
+      <div class="spec-card-title">Connectivity & I/O</div>
+      <ul class="spec-list">
+        <li><span>Ethernet</span><strong>Gigabit RJ45 (GEM3)</strong></li>
+        <li><span>USB Gadget</span><strong>RNDIS over USB (active)</strong></li>
+        <li><span>FMC HPC</span><strong>2 × HPC connectors</strong></li>
+        <li><span>QSPI Flash</span><strong>512 Mb Micron</strong></li>
+        <li><span>SD Card</span><strong>4-bit eMMC/SD</strong></li>
+      </ul>
+    </div>
+
+    <div class="spec-card" data-delay="400">
+      <div class="spec-card-icon">◇</div>
+      <div class="spec-card-title">Storage (This Board)</div>
+      <ul class="spec-list">
+        <li><span>NVMe SSD</span><strong>931.5 GB via PCIe ×4</strong></li>
+        <li><span>SD Card</span><strong>29.9 GB (OS)</strong></li>
+        <li><span>QSPI</span><strong>64 MB Flash</strong></li>
+        <li><span>OS</span><strong>PetaLinux 2024.1</strong></li>
+        <li><span>Kernel</span><strong>Linux 6.6.10-xilinx</strong></li>
+      </ul>
+    </div>
+
+    <div class="spec-card" data-delay="500">
+      <div class="spec-card-icon">◈</div>
+      <div class="spec-card-title">USB Gadget Stack (Active)</div>
+      <ul class="spec-list">
+        <li><span>Mode</span><strong>USB 2.0 Peripheral</strong></li>
+        <li><span>Function</span><strong>RNDIS Ethernet</strong></li>
+        <li><span>Board IP</span><strong>192.168.10.20</strong></li>
+        <li><span>UDC</span><strong>fe200000.usb (DWC3)</strong></li>
+        <li><span>Speed</span><strong>480 Mbps (HS)</strong></li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<!-- Gallery Section -->
+<section class="gallery-section" id="gallery">
+  <div class="section-header">
+    <div class="section-tag">HARDWARE</div>
+    <h2>Board Gallery</h2>
+    <p>The ZCU102 evaluation board and its complete kit contents.</p>
+  </div>
+
+  <div class="gallery-grid">
+    <div class="gallery-item gallery-item-large">
+      <img src="board.jpg" alt="ZCU102 Evaluation Board — Top View">
+      <div class="gallery-overlay">
+        <div class="gallery-overlay-title">ZCU102 Evaluation Board</div>
+        <div class="gallery-overlay-sub">Top view — XCZU9EG-2FFVB1156E</div>
+      </div>
+    </div>
+    <div class="gallery-item">
+      <img src="board-contents.jpg" alt="ZCU102 Kit Contents">
+      <div class="gallery-overlay">
+        <div class="gallery-overlay-title">Kit Contents</div>
+        <div class="gallery-overlay-sub">EK-U1-ZCU102-G complete package</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- JavaScript Features Section -->
+<section class="js-section" id="connectivity">
+  <div class="section-header">
+    <div class="section-tag">JAVASCRIPT</div>
+    <h2>Running JavaScript Features</h2>
+    <p>This page demonstrates live JavaScript capabilities served from the ZCU102 over USB Ethernet.</p>
+  </div>
+
+  <div class="js-features-grid">
+
+    <div class="js-card">
+      <div class="js-card-header">
+        <span class="js-icon">⟳</span>
+        <span>Real-time Clock</span>
+      </div>
+      <div class="js-card-body">
+        <div class="clock-display">
+          <span id="clock-hours">--</span><span class="clock-sep">:</span><span id="clock-minutes">--</span><span class="clock-sep">:</span><span id="clock-seconds">--</span>
+        </div>
+        <div class="clock-date" id="clock-date">---</div>
+      </div>
+      <div class="js-card-desc">JavaScript Date API updating every second via setInterval()</div>
+    </div>
+
+    <div class="js-card">
+      <div class="js-card-header">
+        <span class="js-icon">⚡</span>
+        <span>Fetch API Demo</span>
+      </div>
+      <div class="js-card-body">
+        <div class="fetch-result" id="fetch-result">Click to fetch data</div>
+        <button class="js-btn" onclick="runFetch()">Fetch Random Quote</button>
+      </div>
+      <div class="js-card-desc">fetch() API demonstrating async HTTP requests from the browser</div>
+    </div>
+
+    <div class="js-card">
+      <div class="js-card-header">
+        <span class="js-icon">◈</span>
+        <span>Canvas Animation</span>
+      </div>
+      <div class="js-card-body">
+        <canvas id="canvas-demo" width="280" height="120"></canvas>
+      </div>
+      <div class="js-card-desc">HTML5 Canvas API — animated particle system drawn with requestAnimationFrame()</div>
+    </div>
+
+    <div class="js-card">
+      <div class="js-card-header">
+        <span class="js-icon">≋</span>
+        <span>Web Storage</span>
+      </div>
+      <div class="js-card-body">
+        <div class="storage-display">
+          <div class="storage-item">
+            <span>Page visits:</span>
+            <strong id="visit-count">--</strong>
+          </div>
+          <div class="storage-item">
+            <span>Last visit:</span>
+            <strong id="last-visit">--</strong>
+          </div>
+        </div>
+        <button class="js-btn" onclick="clearStorage()">Clear Storage</button>
+      </div>
+      <div class="js-card-desc">localStorage API persisting data between browser sessions</div>
+    </div>
+
+    <div class="js-card">
+      <div class="js-card-header">
+        <span class="js-icon">▦</span>
+        <span>DOM Manipulation</span>
+      </div>
+      <div class="js-card-body">
+        <div class="dom-demo">
+          <div class="dom-box" id="dom-box-1">A53</div>
+          <div class="dom-box" id="dom-box-2">R5F</div>
+          <div class="dom-box" id="dom-box-3">PL</div>
+          <div class="dom-box" id="dom-box-4">GPU</div>
+        </div>
+        <button class="js-btn" onclick="animateBoxes()">Animate Cores</button>
+      </div>
+      <div class="js-card-desc">Dynamic DOM manipulation — creating, styling and animating elements with JavaScript</div>
+    </div>
+
+    <div class="js-card">
+      <div class="js-card-header">
+        <span class="js-icon">∿</span>
+        <span>Web Audio API</span>
+      </div>
+      <div class="js-card-body">
+        <div class="audio-viz" id="audio-viz">
+          <div class="audio-bar"></div>
+          <div class="audio-bar"></div>
+          <div class="audio-bar"></div>
+          <div class="audio-bar"></div>
+          <div class="audio-bar"></div>
+          <div class="audio-bar"></div>
+          <div class="audio-bar"></div>
+          <div class="audio-bar"></div>
+          <div class="audio-bar"></div>
+          <div class="audio-bar"></div>
+          <div class="audio-bar"></div>
+          <div class="audio-bar"></div>
+        </div>
+        <button class="js-btn" onclick="playTone()">Generate Tone</button>
+      </div>
+      <div class="js-card-desc">Web Audio API — generating audio oscillator and visualising frequency bars</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Live Demo Section -->
+<section class="demo-section" id="demo">
+  <div class="section-header">
+    <div class="section-tag">LIVE</div>
+    <h2>Live Board Info</h2>
+    <p>Real-time information about the ZCU102 serving this page.</p>
+  </div>
+
+  <div class="demo-terminal">
+    <div class="terminal-bar">
+      <span class="terminal-dot red"></span>
+      <span class="terminal-dot yellow"></span>
+      <span class="terminal-dot green"></span>
+      <span class="terminal-title">ZCU102 — Live Stats</span>
+    </div>
+    <div class="terminal-body">
+      <div class="terminal-line"><span class="term-prompt">root@zcu102pcie:~$</span> <span class="term-cmd">cat /proc/version</span></div>
+      <div class="terminal-line term-out">Linux version 6.6.10-xilinx-v2024.1 (aarch64-xilinx-linux-gcc 12.2.0)</div>
+      <div class="terminal-line"><span class="term-prompt">root@zcu102pcie:~$</span> <span class="term-cmd">lscpu | grep "Model name"</span></div>
+      <div class="terminal-line term-out">Model name: Cortex-A53</div>
+      <div class="terminal-line"><span class="term-prompt">root@zcu102pcie:~$</span> <span class="term-cmd">ip addr show usb0</span></div>
+      <div class="terminal-line term-out">6: usb0: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt;</div>
+      <div class="terminal-line term-out">    inet 192.168.10.20/24 scope global usb0</div>
+      <div class="terminal-line"><span class="term-prompt">root@zcu102pcie:~$</span> <span class="term-cmd">lspci | grep NVMe</span></div>
+      <div class="terminal-line term-out">01:00.0 Non-Volatile memory controller: MAXIO MAP1202</div>
+      <div class="terminal-line"><span class="term-prompt">root@zcu102pcie:~$</span> <span class="term-cmd" id="blink-cursor">█</span></div>
+    </div>
+  </div>
+
+  <div class="info-cards">
+    <div class="info-card">
+      <div class="info-card-label">This page is served by</div>
+      <div class="info-card-value">Python3 http.server</div>
+      <div class="info-card-sub">Built-in module — zero dependencies</div>
+    </div>
+    <div class="info-card">
+      <div class="info-card-label">Network path</div>
+      <div class="info-card-value">USB → RNDIS → IP</div>
+      <div class="info-card-sub">Physical USB cable acting as Ethernet</div>
+    </div>
+    <div class="info-card">
+      <div class="info-card-label">Server address</div>
+      <div class="info-card-value">192.168.10.20:8080</div>
+      <div class="info-card-sub">Bound to usb0 interface</div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-left">
+    <span class="footer-logo">◈ ZCU102</span>
+    <span>Zynq UltraScale+ MPSoC Evaluation Board</span>
+  </div>
+  <div class="footer-center">
+    <span>Served over USB Ethernet · RNDIS Gadget · 192.168.10.20</span>
+  </div>
+  <div class="footer-right">
+    <span>© 2026 Ali Mehrpooya · Smart Internet Lab · University of Bristol</span>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
