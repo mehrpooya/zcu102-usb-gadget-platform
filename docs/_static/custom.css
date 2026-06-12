@@ -1,0 +1,96 @@
+/* custom.css — AMD-accented overrides for the sphinx-rtd-theme
+   Drop in docs/_static/custom.css
+*/
+
+/* AMD red accent on the sidebar header bar */
+.wy-nav-top,
+.wy-side-nav-search {
+  background-color: #131316 !important;
+}
+
+/* AMD red highlight on active sidebar links */
+.wy-menu-vertical li.current > a,
+.wy-menu-vertical li.current > a:hover {
+  background-color: #1f1f24;
+  border-left: 3px solid #ED1C24;
+}
+
+/* Teal for all links (matches AMD Technical Information Portal) */
+a,
+.wy-menu-vertical a:hover {
+  color: #007D9B;
+}
+
+/* Top navigation bar — keep it dark */
+.wy-nav-top a {
+  color: #ffffff;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+/* AMD red underline on h1/h2 */
+h1 {
+  border-bottom: 3px solid #ED1C24;
+  padding-bottom: 0.35em;
+}
+
+h2 {
+  border-bottom: 1px solid #e3e6ea;
+}
+
+/* Code blocks — dark surface with teal left border */
+div[class^="highlight"],
+div[class*=" highlight"] {
+  border-left: 3px solid #007D9B !important;
+  background: #1f1f24 !important;
+  border-radius: 0 4px 4px 0;
+}
+
+div[class^="highlight"] pre,
+div[class*=" highlight"] pre {
+  background: #1f1f24 !important;
+  color: #e6e8ec;
+}
+
+/* Table header — AMD black */
+table.docutils th,
+.wy-table-responsive table th {
+  background: #131316 !important;
+  color: #ffffff !important;
+}
+
+/* Note/warning/important boxes */
+.admonition.note,
+.admonition.tip {
+  border-left-color: #007D9B;
+}
+
+.admonition.warning,
+.admonition.danger {
+  border-left-color: #ED1C24;
+}
+
+.admonition.important {
+  border-left-color: #6b3fa0;
+}
+
+/* Footer */
+footer {
+  border-top: 2px solid #ED1C24;
+}
+
+/* Sidebar project version label */
+.wy-side-nav-search .version {
+  color: #9aa1ab;
+}
+
+/* Copy-button placement */
+.copybtn {
+  background: #2c2c34 !important;
+  border: 1px solid #3a3a42 !important;
+  color: #9aa1ab !important;
+}
+.copybtn:hover {
+  background: #ED1C24 !important;
+  color: #fff !important;
+}
