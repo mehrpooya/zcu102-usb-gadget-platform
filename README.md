@@ -1,7 +1,30 @@
-# ZCU102 USB Gadget & NVMe Platform
+<!-- ╔══════════════════════════════════════════════════════════════════════╗ -->
+<!-- ║                     ZCU102 USB GADGET & NVMe PLATFORM                 ║ -->
+<!-- ╚══════════════════════════════════════════════════════════════════════╝ -->
 
 <p align="center">
-  <img src="images/board.jpg" width="500" alt="ZCU102 Evaluation Board">
+  <img src="images/header.svg" alt="ZCU102 USB Gadget & NVMe Platform" width="100%">
+</p>
+
+<p align="center">
+  <a href="https://www.xilinx.com/products/boards-and-kits/ek-u1-zcu102-g.html"><img src="https://img.shields.io/badge/Board-ZCU102%20Rev%201.0-F5A623?style=for-the-badge&labelColor=0B1320" alt="Board"></a>
+  <img src="https://img.shields.io/badge/SoC-Zynq%20UltraScale%2B%20MPSoC-0FB5A2?style=for-the-badge&labelColor=0B1320" alt="SoC">
+  <img src="https://img.shields.io/badge/PetaLinux-2024.1-0FB5A2?style=for-the-badge&labelColor=0B1320" alt="PetaLinux">
+  <img src="https://img.shields.io/badge/Linux-6.6.10--xilinx-F5A623?style=for-the-badge&logo=linux&logoColor=white&labelColor=0B1320" alt="Kernel">
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Shell-Bash-0FB5A2?style=for-the-badge&logo=gnubash&logoColor=white&labelColor=0B1320" alt="Bash">
+  <img src="https://img.shields.io/badge/PTY%20Server-Python-F5A623?style=for-the-badge&logo=python&logoColor=white&labelColor=0B1320" alt="Python">
+  <img src="https://img.shields.io/badge/Terminal-xterm.js-0FB5A2?style=for-the-badge&logo=javascript&logoColor=white&labelColor=0B1320" alt="xterm.js">
+  <img src="https://img.shields.io/badge/Gadget-configfs-F5A623?style=for-the-badge&labelColor=0B1320" alt="configfs">
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Release-v1.0.0-0FB5A2?style=for-the-badge&labelColor=0B1320" alt="Version">
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-F5A623?style=for-the-badge&labelColor=0B1320" alt="License: MIT"></a>
+  <img src="https://img.shields.io/badge/Maintained-yes-0FB5A2?style=for-the-badge&labelColor=0B1320" alt="Maintained">
+  <img src="https://img.shields.io/badge/PRs-welcome-F5A623?style=for-the-badge&labelColor=0B1320" alt="PRs welcome">
 </p>
 
 <p align="center">
@@ -9,28 +32,36 @@
 </p>
 
 <p align="center">
-  <a href="#features">Features</a> •
-  <a href="#architecture">Architecture</a> •
-  <a href="#quick-start">Quick Start</a> •
-  <a href="#scripts">Scripts</a> •
-  <a href="#web-server">Web Server</a> •
-  <a href="#documentation">Documentation</a>
+  <a href="#-overview">Overview</a> &nbsp;•&nbsp;
+  <a href="#-features">Features</a> &nbsp;•&nbsp;
+  <a href="#-architecture">Architecture</a> &nbsp;•&nbsp;
+  <a href="#-quick-start">Quick Start</a> &nbsp;•&nbsp;
+  <a href="#-scripts">Scripts</a> &nbsp;•&nbsp;
+  <a href="#-web-server">Web Server</a> &nbsp;•&nbsp;
+  <a href="#-documentation">Documentation</a>
 </p>
 
 ---
 
-## Overview
+## ▸ Overview
 
 This project transforms the **Xilinx ZCU102** evaluation board (Zynq UltraScale+ MPSoC) into a multi-function USB device platform. A single USB cable connection provides simultaneous Ethernet networking, mass storage, and serial console access to a host PC. The system also hosts a showcase web server with a live interactive browser terminal.
 
-**Author:** Ali Mehrpooya  
-**Affiliation:** Smart Internet Lab (HPN Group), University of Bristol  
-**Platform:** PetaLinux 2024.1, Linux 6.6.10-xilinx  
-**Board:** ZCU102 Rev 1.0 (XCZU9EG-2FFVB1156E)
+<p align="center">
+  <img src="images/board.jpg" width="520" alt="ZCU102 Evaluation Board">
+</p>
+
+<table>
+<tr><td><b>Author</b></td><td>Ali Mehrpooya</td></tr>
+<tr><td><b>Affiliation</b></td><td>Smart Internet Lab (HPN Group), University of Bristol</td></tr>
+<tr><td><b>Platform</b></td><td>PetaLinux 2024.1 · Linux 6.6.10-xilinx</td></tr>
+<tr><td><b>Board</b></td><td>ZCU102 Rev 1.0 (XCZU9EG-2FFVB1156E)</td></tr>
+<tr><td><b>Release</b></td><td>v1.0.0</td></tr>
+</table>
 
 ---
 
-## Features
+## ▸ Features
 
 ### USB Gadget Functions (One Cable → Three Devices)
 | Function | Host Sees | Board Device | Protocol |
@@ -56,7 +87,7 @@ This project transforms the **Xilinx ZCU102** evaluation board (Zynq UltraScale+
 
 ---
 
-## Architecture
+## ▸ Architecture
 
 ```
 ┌─────────────────────────────────────────────────────┐
@@ -95,7 +126,10 @@ This project transforms the **Xilinx ZCU102** evaluation board (Zynq UltraScale+
 
 ---
 
-## Repository Structure
+## ▸ Repository Structure
+
+<details>
+<summary><b>Click to expand the full file tree</b></summary>
 
 ```
 .
@@ -165,14 +199,18 @@ This project transforms the **Xilinx ZCU102** evaluation board (Zynq UltraScale+
 │           ├── zcu102-usb-gadgets.bb
 │           └── zcu102-webserver.bb
 ├── images/
+│   ├── header.svg
+│   ├── footer.svg
 │   ├── board.jpg
 │   └── board-contents.jpg
 └── LICENSE
 ```
 
+</details>
+
 ---
 
-## Quick Start
+## ▸ Quick Start
 
 ### Prerequisites
 - ZCU102 board with PetaLinux 2024.1 booted from SD card
@@ -212,7 +250,7 @@ sudo ./over_eth_web_start.sh
 
 ---
 
-## Scripts
+## ▸ Scripts
 
 ### USB Gadget Scripts
 
@@ -254,7 +292,7 @@ sudo ./ondm_triple_stop.sh
 
 ---
 
-## Web Server
+## ▸ Web Server
 
 ### Showcase Page (`www/`)
 
@@ -271,7 +309,7 @@ Browser (xterm.js) ←WebSocket→ terminal_server.py ←PTY→ /bin/sh
 
 ---
 
-## PetaLinux Configuration
+## ▸ PetaLinux Configuration
 
 ### Device Tree (`system-user.dtsi`)
 
@@ -286,7 +324,9 @@ Browser (xterm.js) ←WebSocket→ terminal_server.py ←PTY→ /bin/sh
 
 ### Kernel Config (`bsp.cfg`)
 
-Key additions for USB gadget support:
+<details>
+<summary><b>Key additions for USB gadget support</b></summary>
+
 ```
 CONFIG_USB_GADGET=y
 CONFIG_USB_DWC3_DUAL_ROLE=y
@@ -299,16 +339,18 @@ CONFIG_USB_F_ACM=m
 CONFIG_USB_F_MASS_STORAGE=m
 ```
 
+</details>
+
 ---
 
-## Documentation
+## ▸ Documentation
 
 - **[Full Tutorial](docs/ZCU102_USB_Gadget_Tutorial.md):** Comprehensive engineering tutorial covering all topics
 - **[Migration Summary](docs/chat_migration_summary.md):** Context for continuing development in new sessions
 
 ---
 
-## Key Lessons Learned
+## ▸ Key Lessons Learned
 
 1. **FSBL programs GTR muxes**, not U-Boot or Linux
 2. **PCIe x4 requires deleting USB3/SATA/DP psgtr references** to prevent lane stealing
@@ -321,14 +363,26 @@ CONFIG_USB_F_MASS_STORAGE=m
 
 ---
 
-## License
+## ▸ License
 
-MIT License
+Released under the **MIT License** — see [`LICENSE`](LICENSE) for full text.
+
+```
+MIT License · Copyright (c) 2025 Ali Mehrpooya
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files...
+```
 
 ---
 
-## Acknowledgments
+## ▸ Acknowledgments
 
 - AMD/Xilinx for the ZCU102 platform and PetaLinux tools
 - Smart Internet Lab, University of Bristol
 - xterm.js project for the browser terminal library
+
+---
+
+<p align="center">
+  <img src="images/footer.svg" alt="ZCU102 USB Gadget & NVMe Platform — Ali Mehrpooya, Smart Internet Lab (HPN Group), University of Bristol" width="100%">
+</p>
